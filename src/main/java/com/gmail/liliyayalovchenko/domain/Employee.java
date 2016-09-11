@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonView;
 import com.gmail.liliyayalovchenko.jsonViews.Views;
+import org.hibernate.annotations.DiscriminatorOptions;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Proxy;
 
@@ -16,6 +17,10 @@ import java.util.Date;
 //@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @JsonIgnoreProperties(ignoreUnknown = false)
 @Proxy(lazy = false)
+
+@DiscriminatorValue("Employee")
+@DiscriminatorOptions(force = true, insert = true)
+@DiscriminatorColumn(discriminatorType = DiscriminatorType.STRING, name = "dtype")
 public class Employee {
 
     @Id

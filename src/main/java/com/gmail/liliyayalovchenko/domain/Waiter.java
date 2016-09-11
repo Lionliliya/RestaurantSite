@@ -6,15 +6,13 @@ import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 import org.hibernate.annotations.Proxy;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Proxy(lazy = false)
 //@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+@DiscriminatorValue(value="Waiter")
 public class Waiter extends Employee {
 
     @OneToMany(cascade = CascadeType.ALL)
