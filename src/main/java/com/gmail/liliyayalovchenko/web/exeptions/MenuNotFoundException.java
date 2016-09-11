@@ -9,4 +9,8 @@ public class MenuNotFoundException extends Exception{
     public MenuNotFoundException(int id) {
         super ("MenuNotFoundException with id="+id);
     }
+
+    public MenuNotFoundException(String name) {
+        super ("MenuNotFoundException with name="+name);
+    }
 }

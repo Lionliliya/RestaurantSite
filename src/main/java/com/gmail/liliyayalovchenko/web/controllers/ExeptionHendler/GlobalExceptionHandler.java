@@ -2,6 +2,7 @@ package com.gmail.liliyayalovchenko.web.controllers.ExeptionHendler;
 
 import com.gmail.liliyayalovchenko.domain.ExceptionJSONInfo;
 import com.gmail.liliyayalovchenko.web.exeptions.EmployeeNotFoundException;
+import com.gmail.liliyayalovchenko.web.exeptions.MenuNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -66,9 +67,9 @@ public class GlobalExceptionHandler {
         return modelAndView;
     }
 
-    @ExceptionHandler(EmployeeNotFoundException.class)
+    @ExceptionHandler({EmployeeNotFoundException.class, MenuNotFoundException.class})
     public @ResponseBody
-    ExceptionJSONInfo handleEmployeeNotFoundException(HttpServletRequest request, Exception ex){
+    ExceptionJSONInfo handleApiNotFoundException(HttpServletRequest request, Exception ex){
 
         ExceptionJSONInfo response = new ExceptionJSONInfo();
         response.setUrl(request.getRequestURL().toString());
