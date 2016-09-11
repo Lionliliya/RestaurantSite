@@ -57,7 +57,7 @@ public class OrderAPI {
     }
 
     /**
-     * Method returns a list of all the orders
+     * Method returns the order by id
      * with only employee firstName and secondName
      *
      * @author Liliya Yalovchenko
@@ -85,16 +85,26 @@ public class OrderAPI {
      *
      * @author Liliya Yalovchenko
      */
-    @RequestMapping(value = "/order/status/opened", method = RequestMethod.GET)
+    @RequestMapping(value = "/order/status/{status}", method = RequestMethod.GET)
     @JsonView(Views.Private.class)
-    public ResponseEntity<List<Order>> allOpenOrders() throws OrderNotFoundException {
+    public ResponseEntity<List<Order>> allOpenOrders(@PathVariable String status) throws OrderNotFoundException {
+        boolean isOpen;
+
+        if (status.equals("opened")) {
+            isOpen = true;
+        } else if (status.equals("closed")) {
+            isOpen = false;
+        } else {
+            throw new OrderNotFoundException(status);
+        }
 
         List<Order> orders;
 
         try {
-            orders = orderService.getAllOpenOrders();
+            orders = isOpen ? orderService.getAllOpenOrders() : orderService.getAllClosedOrders();
+
         } catch (Exception ex) {
-            throw new OrderNotFoundException("Opened");
+            throw new OrderNotFoundException(status);
         }
 
         objectMapper.setConfig(objectMapper.getSerializationConfig()
@@ -107,29 +117,4 @@ public class OrderAPI {
         return new ResponseEntity<>(orders, HttpStatus.OK);
     }
 
-    /**
-     * Method returns a list of all the orders
-     * with only employee firstName and secondName
-     *
-     * @author Liliya Yalovchenko
-     */
-    @RequestMapping(value = "/order/status/closed", method = RequestMethod.GET)
-    @JsonView(Views.Private.class)
-    public ResponseEntity<List<Order>> allClosedOrders() throws OrderNotFoundException {
-
-        List<Order> orders;
-
-        try {
-            orders = orderService.getAllClosedOrders();
-            objectMapper.setConfig(objectMapper.getSerializationConfig().withView(Views.Private.class));
-        } catch (Exception ex) {
-            throw new OrderNotFoundException("Closed");
-        }
-
-        if (orders.isEmpty()) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        }
-
-        return new ResponseEntity<>(orders, HttpStatus.OK);
-    }
 }

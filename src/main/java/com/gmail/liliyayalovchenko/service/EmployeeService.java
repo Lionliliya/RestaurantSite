@@ -44,8 +44,4 @@ public class EmployeeService {
         return employeeDAO.getBySecondName(employeeSecondName);
     }
 
-    @Transactional
-    public void remove(int id) {
-        employeeDAO.removeEmployee(id);
-    }
 }

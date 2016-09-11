@@ -20,28 +20,6 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     @Autowired
     private SessionFactory sessionFactory;
 
-    @Override
-    @Transactional(propagation = Propagation.MANDATORY)
-    public void save(Employee employee) {
-        sessionFactory.getCurrentSession().save(employee);
-    }
-
-    @Override
-    @Transactional(propagation = Propagation.MANDATORY)
-    public void save(int id, String secondName, String firstName, String dateOfEmpl, String phone, String position, int salary, String photoLink) throws ParseException {
-        Employee employee = sessionFactory.getCurrentSession().load(Employee.class, id);
-        employee.setFirstName(firstName);
-        employee.setSecondName(secondName);
-        employee.setEmplDate(new SimpleDateFormat("dd-MM-yyyy").parse(dateOfEmpl));
-        employee.setPhone(phone);
-        for (Position position1 : Position.values()) {
-            if (position.equals(position1.toString())) {
-                employee.setPosition(position1);
-            }
-        }
-        employee.setSalary(salary);
-        employee.setPhotoLink(photoLink);
-    }
 
     @Override
     @Transactional(propagation = Propagation.MANDATORY)
@@ -59,27 +37,6 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     @Transactional(propagation = Propagation.MANDATORY)
     public List<Employee> findAll() {
         return sessionFactory.getCurrentSession().createQuery("select e from Employee e").list();
-    }
-
-    @Override
-    @Transactional(propagation = Propagation.MANDATORY)
-    public void removeEmployee(String firstName, String secondName) {
-        Session session = sessionFactory.getCurrentSession();
-        Employee employee = (Employee) session.createQuery("select e from Employee e where e.firstName = :var1 and e.secondName= :var2")
-                .setParameter("var1", firstName)
-                .uniqueResult();
-        if (employee != null) {
-            session.delete(employee);
-        } else {
-            throw new RuntimeException("Cant find employee by this name. Error!");
-        }
-    }
-
-    @Override
-    @Transactional(propagation = Propagation.MANDATORY)
-    public void removeEmployee(int id) {
-        Session session = sessionFactory.getCurrentSession();
-        session.delete(session.load(Employee.class, id));
     }
 
     @Override

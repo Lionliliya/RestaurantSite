@@ -21,25 +21,6 @@ public class MenuDAOImpl implements MenuDAO {
 
     @Override
     @Transactional(propagation = Propagation.MANDATORY)
-    public void createMenu(Menu menu) {
-        for (Dish dish : menu.getDishList()) {
-            dish.setMenu(menu);
-            System.out.println(" menu was set for dish " + dish.getName());
-        }
-
-        sessionFactory.getCurrentSession().save(menu);
-    }
-
-    @Override
-    @Transactional(propagation = Propagation.MANDATORY)
-    public void removeMenu(int id) {
-        Session session = sessionFactory.getCurrentSession();
-        Menu menu = session.load(Menu.class, id);
-        session.delete(menu);
-    }
-
-    @Override
-    @Transactional(propagation = Propagation.MANDATORY)
     public Menu getMenuByName(String name) {
         Session session = sessionFactory.getCurrentSession();
         Criteria criteria = session.createCriteria(Menu.class);
@@ -52,40 +33,6 @@ public class MenuDAOImpl implements MenuDAO {
         }
     }
 
-    @Override
-    @Transactional(propagation = Propagation.MANDATORY)
-    public void addDishToMenu(int menuId, Dish dish) {
-        Session session = sessionFactory.getCurrentSession();
-        Menu menu = session.load(Menu.class, menuId);
-        if (menu == null) {
-            throw new RuntimeException("Cant get menu by this id");
-        } else {
-            menu.addDishToMenu(dish);
-            session.update(menu);
-        }
-    }
-
-    @Override
-    @Transactional(propagation = Propagation.MANDATORY)
-    public void removeDishFromMenu(int menuId, Dish dish) {
-        Session session = sessionFactory.getCurrentSession();
-        Menu menu = session.load(Menu.class, menuId);
-        if (menu == null) {
-            throw new RuntimeException("Cant get menu by this id");
-        } else {
-            menu.removeDishFromMenu(dish);
-            session.update(menu);
-        }
-    }
-
-    @Override
-    @Transactional(propagation = Propagation.MANDATORY)
-    public void updateDish(Dish dishByName, Menu menu) {
-        Session session = sessionFactory.getCurrentSession();
-        dishByName.setMenu(menu);
-        session.update(dishByName);
-        session.flush();
-    }
 
     @Override
     @Transactional(propagation = Propagation.MANDATORY)
@@ -102,14 +49,5 @@ public class MenuDAOImpl implements MenuDAO {
         Session session = sessionFactory.getCurrentSession();
         Menu menu = session.load(Menu.class, id);
         return menu;
-    }
-
-    @Override
-    @Transactional(propagation = Propagation.MANDATORY)
-    public void saveMenu(int id, String name) {
-        Session session = sessionFactory.getCurrentSession();
-        Menu menu = session.load(Menu.class, id);
-        menu.setName(name);
-        session.update(menu);
     }
 }

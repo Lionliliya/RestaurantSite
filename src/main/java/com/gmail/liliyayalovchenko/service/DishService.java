@@ -22,8 +22,4 @@ public class DishService {
         return dishDAO.search(pattern);
     }
 
-    @Transactional
-    public void remove(int id) {
-        dishDAO.remove(id);
-    }
 }
