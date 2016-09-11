@@ -57,13 +57,6 @@ public class OrderDAOImpl implements OrderDAO {
                 .setParameter("edDate", edDate).list();
     }
 
-    private Date plusOneDay(SimpleDateFormat sdf, String date) throws ParseException {
-        Calendar c = Calendar.getInstance();
-        c.setTime(sdf.parse(date));
-        c.add(Calendar.DATE, 1);
-        return c.getTime();
-    }
-
     @Override
     @Transactional(propagation = Propagation.MANDATORY)
     public List<Order> getOrderByTable(int tableNumber) {
@@ -71,51 +64,6 @@ public class OrderDAOImpl implements OrderDAO {
                 .createQuery("select o from Order o where o.tableNumber =:tablNumb")
                 .setParameter("tablNumb", tableNumber)
                 .list();
-    }
-
-    @Override
-    @Transactional(propagation = Propagation.MANDATORY)
-    public void addDishToOpenOrder(Dish dish, int orderNumber) {
-        Session session = sessionFactory.getCurrentSession();
-        Order order = (Order) session.createQuery("select o from Order o where o.orderNumber =:orderNumber")
-                .setParameter("orderNumber", orderNumber)
-                .list().get(0);
-        if (order == null) {
-            throw new RuntimeException("Cant get order by this order number! Wrong order number");
-        } else {
-            order.addDishToOrder(dish);
-            session.update(order);
-        }
-    }
-
-    @Override
-    @Transactional(propagation = Propagation.MANDATORY)
-    public void deleteOrder(int orderNumber) {
-        Session session = sessionFactory.getCurrentSession();
-        Order order = (Order) session.createQuery("select o from Order o where o.orderNumber =:orderNumber")
-                .setParameter("orderNumber", orderNumber)
-                .list().get(0);
-        if (order == null) {
-            throw new RuntimeException("Cant get order by this order number! Wrong order number");
-        } else {
-            session.delete(order);
-        }
-    }
-
-    @Override
-    @Transactional(propagation = Propagation.MANDATORY)
-    public void changeOrderStatus(int orderNumber) {
-        Session session = sessionFactory.getCurrentSession();
-        Order order = (Order) session.createQuery("select o from Order o where o.orderNumber =:orderNumber")
-                .setParameter("orderNumber", orderNumber)
-                .list().get(0);
-        if (order != null) {
-            order.setStatus(OrderStatus.closed);
-            session.update(order);
-
-        } else {
-            throw new RuntimeException("Cant get order by this order number! Wrong order number");
-        }
     }
 
     @Override
@@ -138,11 +86,11 @@ public class OrderDAOImpl implements OrderDAO {
         }
     }
 
-    @Override
-    @Transactional(propagation = Propagation.MANDATORY)
-    public int getLastOrder() {
-        return (int) sessionFactory.getCurrentSession()
-                .createQuery("select max(o.orderNumber) from Order o")
-                .uniqueResult();
+    private Date plusOneDay(SimpleDateFormat sdf, String date) throws ParseException {
+        Calendar c = Calendar.getInstance();
+        c.setTime(sdf.parse(date));
+        c.add(Calendar.DATE, 1);
+        return c.getTime();
     }
+
 }

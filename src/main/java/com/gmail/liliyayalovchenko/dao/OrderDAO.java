@@ -1,6 +1,5 @@
 package com.gmail.liliyayalovchenko.dao;
 
-import com.gmail.liliyayalovchenko.domain.Dish;
 import com.gmail.liliyayalovchenko.domain.Order;
 import com.gmail.liliyayalovchenko.domain.OrderStatus;
 
@@ -13,17 +12,9 @@ public interface OrderDAO {
 
     List<Order> findAll();
 
-    void addDishToOpenOrder(Dish dish, int orderNumber);
-
-    void deleteOrder(int orderNumber);
-
-    void changeOrderStatus(int orderNumber);
-
     List<Order> getOpenOrClosedOrder(OrderStatus orderStatus);
 
     Order getOrderById(int i);
-
-    int getLastOrder();
 
     List<Order> getOrderByEmployee(String name);
 

@@ -21,15 +21,6 @@ public class MenuDAOImpl implements MenuDAO {
 
     @Override
     @Transactional(propagation = Propagation.MANDATORY)
-    public void addNewMenu(String menuName, List<Dish> dishList) {
-        Menu menu = new Menu();
-        menu.setName(menuName);
-        menu.setDishList(dishList);
-        sessionFactory.getCurrentSession().save(menu);
-    }
-
-    @Override
-    @Transactional(propagation = Propagation.MANDATORY)
     public void createMenu(Menu menu) {
         for (Dish dish : menu.getDishList()) {
             dish.setMenu(menu);
@@ -63,24 +54,6 @@ public class MenuDAOImpl implements MenuDAO {
 
     @Override
     @Transactional(propagation = Propagation.MANDATORY)
-    public void showAllMenus() {
-        Session session = sessionFactory.getCurrentSession();
-        session.createCriteria(Menu.class).list().forEach(System.out::println);
-    }
-
-    @Override
-    @Transactional(propagation = Propagation.MANDATORY)
-    public void showAllMenuNames() {
-        List<Menu> menus = sessionFactory.getCurrentSession().createCriteria(Menu.class).list();
-        for (Menu menu : menus) {
-            System.out.println(menu.getName());
-        }
-
-    }
-
-
-    @Override
-    @Transactional(propagation = Propagation.MANDATORY)
     public void addDishToMenu(int menuId, Dish dish) {
         Session session = sessionFactory.getCurrentSession();
         Menu menu = session.load(Menu.class, menuId);
@@ -107,28 +80,12 @@ public class MenuDAOImpl implements MenuDAO {
 
     @Override
     @Transactional(propagation = Propagation.MANDATORY)
-    public void removeAllDishes(int menuId) {
-        Session session = sessionFactory.getCurrentSession();
-        Menu menu = session.load(Menu.class, menuId);
-        if (menu == null) {
-            throw new RuntimeException("Cant get menu by this id");
-        } else {
-            menu.removeAllDishes();
-            session.update(menu);
-            System.out.println("menu was updated");
-        }
-    }
-
-    @Override
-    @Transactional(propagation = Propagation.MANDATORY)
     public void updateDish(Dish dishByName, Menu menu) {
         Session session = sessionFactory.getCurrentSession();
         dishByName.setMenu(menu);
         session.update(dishByName);
         session.flush();
     }
-
-
 
     @Override
     @Transactional(propagation = Propagation.MANDATORY)

@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/")
 public class DishController {
@@ -29,7 +31,8 @@ public class DishController {
     @RequestMapping(value = "/search", method = RequestMethod.POST)
     public ModelAndView search(@RequestParam(value = "pattern") String pattern) {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("dishes", dishService.search(pattern));
+        List<Dish> dishList = dishService.search(pattern);
+        modelAndView.addObject("dishes", dishList);
         modelAndView.setViewName("search");
         return modelAndView;
     }

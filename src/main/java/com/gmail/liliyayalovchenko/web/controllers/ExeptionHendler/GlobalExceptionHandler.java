@@ -3,6 +3,7 @@ package com.gmail.liliyayalovchenko.web.controllers.ExeptionHendler;
 import com.gmail.liliyayalovchenko.domain.ExceptionJSONInfo;
 import com.gmail.liliyayalovchenko.web.exeptions.EmployeeNotFoundException;
 import com.gmail.liliyayalovchenko.web.exeptions.MenuNotFoundException;
+import com.gmail.liliyayalovchenko.web.exeptions.OrderNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -67,7 +68,8 @@ public class GlobalExceptionHandler {
         return modelAndView;
     }
 
-    @ExceptionHandler({EmployeeNotFoundException.class, MenuNotFoundException.class})
+    @ExceptionHandler({EmployeeNotFoundException.class, MenuNotFoundException.class,
+                       OrderNotFoundException.class})
     public @ResponseBody
     ExceptionJSONInfo handleApiNotFoundException(HttpServletRequest request, Exception ex){
 

@@ -15,8 +15,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-//import javax.persistence.Query;
-
 public class DishDAOImpl implements DishDAO {
 
     @Autowired
@@ -27,7 +25,6 @@ public class DishDAOImpl implements DishDAO {
     public void save(Dish dish) {
         sessionFactory.getCurrentSession().save(dish);
     }
-
 
     @Override
     @Transactional(propagation = Propagation.MANDATORY)
@@ -68,12 +65,6 @@ public class DishDAOImpl implements DishDAO {
         } else {
             throw new RuntimeException("Cant get dish by this dish name! Error!");
         }
-    }
-
-    @Override
-    @Transactional(propagation = Propagation.MANDATORY)
-    public void removeDish(Dish dish) {
-        sessionFactory.getCurrentSession().delete(dish);
     }
 
     @Override

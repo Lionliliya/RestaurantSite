@@ -25,13 +25,6 @@ public interface EmployeeDAO {
 
     List<Employee> findAll();
 
-    void removeEmployee(String firstName, String secondName);
-
     void removeEmployee(int id);
-
-
-
-
-
 
 }
