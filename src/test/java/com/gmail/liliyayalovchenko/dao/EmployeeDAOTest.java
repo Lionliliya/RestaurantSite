@@ -1,7 +1,7 @@
 package com.gmail.liliyayalovchenko.dao;
 
-import com.gmail.liliyayalovchenko.domain.*;
-import com.gmail.liliyayalovchenko.service.EmployeeService;
+import com.gmail.liliyayalovchenko.domain.Employee;
+import com.gmail.liliyayalovchenko.domain.Position;
 import com.gmail.liliyayalovchenko.web.configuration.WebConfig;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -15,6 +15,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.AnnotationConfigWebContextLoader;
 import org.springframework.test.context.web.WebAppConfiguration;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 
@@ -27,7 +28,7 @@ import static org.junit.Assert.assertNotNull;
 public class EmployeeDAOTest {
 
     @Autowired
-    EmployeeService employeeService;
+    EmployeeDAO employeeDAO;
 
     private SessionFactory sessionFactory;
 
@@ -44,10 +45,11 @@ public class EmployeeDAOTest {
     }
 
     @Test
+    @Transactional
     public void testGetById() throws Exception {
         Employee employee = createEmployee();
         persistTestObject(employee);
-        Employee employeeFromSource = employeeService.getEmployeeById(employee.getId());
+        Employee employeeFromSource = employeeDAO.getById(employee.getId());
 
         assertNotNull(employeeFromSource);
         assertEquals(employee.getFirstName(), employeeFromSource.getFirstName());
@@ -59,11 +61,12 @@ public class EmployeeDAOTest {
     }
 
     @Test
+    @Transactional
     public void testGetByFirstName() throws Exception {
         Employee employee = createEmployee();
         persistTestObject(employee);
 
-        Employee employeeFromSource = employeeService.getEmployeeByFirstName((employee.getFirstName())).get(0);
+        Employee employeeFromSource = employeeDAO.getByFirstName((employee.getFirstName())).get(0);
 
         assertNotNull(employeeFromSource);
         assertEquals(employee.getFirstName(), employeeFromSource.getFirstName());

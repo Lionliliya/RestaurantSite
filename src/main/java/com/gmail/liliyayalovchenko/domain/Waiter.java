@@ -11,14 +11,12 @@ import java.util.List;
 
 @Entity
 @Proxy(lazy = false)
-//@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @DiscriminatorValue(value="Waiter")
 public class Waiter extends Employee {
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "employee_id")
     @LazyCollection(LazyCollectionOption.FALSE)
-    //@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     @JsonView(Views.Internal.class)
     private List<Order> orderList;
 

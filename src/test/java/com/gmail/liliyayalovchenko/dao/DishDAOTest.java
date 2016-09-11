@@ -4,12 +4,12 @@ import com.gmail.liliyayalovchenko.domain.Dish;
 import com.gmail.liliyayalovchenko.domain.DishCategory;
 import com.gmail.liliyayalovchenko.domain.Ingredient;
 import com.gmail.liliyayalovchenko.domain.Menu;
-import com.gmail.liliyayalovchenko.service.DishService;
 import com.gmail.liliyayalovchenko.web.configuration.WebConfig;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +17,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.AnnotationConfigWebContextLoader;
 import org.springframework.test.context.web.WebAppConfiguration;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,35 +31,41 @@ import static org.junit.Assert.assertNotNull;
 public class DishDAOTest {
 
     @Autowired
-    private DishService dishService;
+    private DishDAO dishDAO;
+
+    private SessionFactory sessionFactory;
+
+    private Session session;
+
+    private Transaction transaction;
+
+    @Before
+    public void before() {
+        sessionFactory = createSessionFactory();
+        session = sessionFactory.openSession();
+        transaction = session.beginTransaction();
+
+    }
 
 
     @Test
+    @Transactional
      public void shouldGetByName() throws Exception {
-         SessionFactory   sessionFactory = createSessionFactory();
-         Session   session = sessionFactory.openSession();
-         Transaction transaction = session.beginTransaction();
-
         Menu menu = createMenu("Summer");
-        session.save(menu);
-        transaction.commit();
+        persistMenu(session, transaction, menu);
 
         List<Ingredient> ingredients = new ArrayList<>();
         ingredients.add(new Ingredient("Melon"));
 
         for (Ingredient ingredient : ingredients) {
-            transaction.begin();
-            session.save(ingredient);
-            transaction.commit();
+            persistIngredient(session, transaction, ingredient);
         }
 
         Dish dish = createDish(ingredients, menu, DishCategory.DRINKS, "Melon fresh");
-        transaction.begin();
-        session.save(dish);
-        transaction.commit();
+        persistDish(session, transaction, dish);
         session.close();
 
-        Dish dishFromSource = dishService.getDishByName(dish.getName());
+        Dish dishFromSource = dishDAO.getDishByName(dish.getName());
 
         assertNotNull(dishFromSource);
         assertEquals(dish.getName(), dishFromSource.getName());
@@ -68,6 +75,22 @@ public class DishDAOTest {
 
      }
 
+    private void persistDish(Session session, Transaction transaction, Dish dish) {
+        transaction.begin();
+        session.save(dish);
+        transaction.commit();
+    }
+
+    private void persistIngredient(Session session, Transaction transaction, Ingredient ingredient) {
+        transaction.begin();
+        session.save(ingredient);
+        transaction.commit();
+    }
+
+    private void persistMenu(Session session, Transaction transaction, Menu menu) {
+        session.save(menu);
+        transaction.commit();
+    }
 
 
     private void removeTestObjects(SessionFactory sessionFactory, Menu menu, List<Ingredient> ingredients, Dish dish) throws Exception {

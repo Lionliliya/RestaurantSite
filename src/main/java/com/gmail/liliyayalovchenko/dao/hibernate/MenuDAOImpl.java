@@ -23,9 +23,9 @@ public class MenuDAOImpl implements MenuDAO {
     @Transactional(propagation = Propagation.MANDATORY)
     public Menu getMenuByName(String name) {
         Session session = sessionFactory.getCurrentSession();
-        Criteria criteria = session.createCriteria(Menu.class);
-        criteria.add(Restrictions.eq("name", name));
-        Menu menu = (Menu) criteria.list().get(0);
+        Menu menu = (Menu) session.createQuery("select m from Menu m where m.name = :var")
+                .setParameter("var", name)
+                .uniqueResult();
         if (menu == null) {
             throw new RuntimeException("Cant get Menu by this name! Wrong name!");
         } else {
@@ -33,21 +33,15 @@ public class MenuDAOImpl implements MenuDAO {
         }
     }
 
-
     @Override
     @Transactional(propagation = Propagation.MANDATORY)
     public List<Menu> getAllMenu() {
-        Session session = sessionFactory.getCurrentSession();
-        Query query = session.createQuery("select e from Menu e");
-        List<Menu> menus = query.list();
-        return menus;
+        return sessionFactory.getCurrentSession().createQuery("select e from Menu e").list();
     }
 
     @Override
     @Transactional(propagation = Propagation.MANDATORY)
     public Menu getMenuById(int id) {
-        Session session = sessionFactory.getCurrentSession();
-        Menu menu = session.load(Menu.class, id);
-        return menu;
+        return sessionFactory.getCurrentSession().load(Menu.class, id);
     }
 }

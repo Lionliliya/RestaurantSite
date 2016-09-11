@@ -13,7 +13,6 @@ import java.util.List;
 
 @Entity
 @Table(name = "DISH")
-//@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @JsonIgnoreProperties(ignoreUnknown = false)
 @Proxy(lazy = false)
 public class Dish {
@@ -47,7 +46,6 @@ public class Dish {
             joinColumns = @JoinColumn(name = "dish_id"),
             inverseJoinColumns = @JoinColumn(name = "ingredient_id"))
     @LazyCollection(LazyCollectionOption.FALSE)
-    //@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     @JsonView(Views.Internal.class)
     private List<Ingredient> ingredients;
 

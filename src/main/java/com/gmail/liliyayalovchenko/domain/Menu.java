@@ -13,7 +13,6 @@ import java.util.List;
 
 @Entity
 @Table(name = "MENU")
-//@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @JsonIgnoreProperties(ignoreUnknown = false)
 @Proxy(lazy = false)
 public class Menu {
@@ -31,7 +30,6 @@ public class Menu {
 
     @OneToMany(mappedBy="menu", cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     @LazyCollection(LazyCollectionOption.FALSE)
-    //@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     @JsonView(Views.Internal.class)
     private List<Dish> dishList;
 
@@ -65,8 +63,6 @@ public class Menu {
     public void setDishList(List<Dish> dishList) {
         this.dishList = dishList;
     }
-
-
 
     @Override
     public String toString() {
@@ -103,28 +99,5 @@ public class Menu {
     public int hashCode() {
         return name != null ? name.hashCode() : 0;
     }
-
-    public void removeDishFromMenu(Dish dish) {
-        dishList.remove(dish);
-        dish.setMenu(null);
-    }
-
-    public void removeAllDishes() {
-        for (Dish dish : dishList) {
-            dish.setMenu(null);
-        }
-        dishList.clear();
-
-    }
-
-
-    public void addDishToMenu(Dish dish) {
-        if (!dishList.contains(dish)) {
-            dishList.add(dish);
-        }
-        dish.setMenu(this);
-    }
-
-
 
 }

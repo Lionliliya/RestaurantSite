@@ -15,7 +15,6 @@ import java.util.List;
 
 @Entity
 @Table(name = "ORDER_FROM_MENU")
-//@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @JsonIgnoreProperties(ignoreUnknown = false)
 @Proxy(lazy = false)
 public class Order {
@@ -54,7 +53,6 @@ public class Order {
     @JoinTable(name = "ORDER_DISH",
                joinColumns = @JoinColumn(name = "order_id"),
                inverseJoinColumns = @JoinColumn(name = "dish_id"))
-    //@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     @LazyCollection(LazyCollectionOption.FALSE)
     @JsonView(Views.Public.class)
     private List<Dish> dishList;

@@ -7,7 +7,6 @@ import java.util.Date;
 
 @Entity
 @Table(name = "READY_MEALS")
-//@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class ReadyMeal {
 
     @Id

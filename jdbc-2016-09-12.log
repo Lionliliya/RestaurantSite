@@ -1,0 +1,349 @@
+00:26:24.501 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+00:26:24.609 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+00:26:25.163 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.1.Final}
+00:26:25.166 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+00:26:25.169 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+00:26:25.524 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+00:26:25.692 [main] INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> z8kfsx9j7j4ufv1v4xk2d|324a0017, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> z8kfsx9j7j4ufv1v4xk2d|324a0017, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/RestaurantCRM, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+00:26:26.084 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+00:26:29.139 [main] WARN  org.hibernate.orm.connections - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+00:26:29.140 [main] INFO  org.hibernate.orm.connections - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/RestaurantCRM]
+00:26:29.141 [main] INFO  org.hibernate.orm.connections - HHH10001001: Connection properties: {user=root, password=****}
+00:26:29.142 [main] INFO  org.hibernate.orm.connections - HHH10001003: Autocommit mode: false
+00:26:29.144 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+00:26:29.156 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+00:26:29.238 [main] INFO  c.g.l.web.configuration.AppLogging - ************************Website - Method is starting!************************
+00:26:29.240 [main] INFO  c.g.l.web.configuration.AppLogging - Method execution(int com.gmail.liliyayalovchenko.dao.OrderDAO.getLastOrder())
+00:26:29.240 [main] INFO  c.g.l.web.configuration.AppLogging - Method : getLastOrder
+00:26:29.241 [main] INFO  c.g.l.web.configuration.AppLogging - Arguments : []
+00:26:29.255 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+00:26:29.379 [main] DEBUG org.hibernate.SQL - select max(order0_.order_num) as col_0_0_ from ORDER_FROM_MENU order0_
+00:26:29.407 [main] INFO  c.g.l.web.configuration.AppLogging - Method execution(int com.gmail.liliyayalovchenko.dao.OrderDAO.getLastOrder())
+00:26:29.407 [main] INFO  c.g.l.web.configuration.AppLogging - Method : getLastOrder
+00:26:29.407 [main] INFO  c.g.l.web.configuration.AppLogging - Arguments : []
+00:26:29.408 [main] INFO  c.g.l.web.configuration.AppLogging - ************************Website - Method is finishing!************************
+00:27:46.398 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+00:27:46.509 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+00:27:47.104 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.1.Final}
+00:27:47.109 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+00:27:47.111 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+00:27:47.191 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+00:27:47.372 [main] INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> z8kfsx9j7j6lmv12qdj9d|324a0017, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> z8kfsx9j7j6lmv12qdj9d|324a0017, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/RestaurantCRM, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+00:27:47.803 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+00:27:50.608 [main] WARN  org.hibernate.orm.connections - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+00:27:50.610 [main] INFO  org.hibernate.orm.connections - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/RestaurantCRM]
+00:27:50.610 [main] INFO  org.hibernate.orm.connections - HHH10001001: Connection properties: {user=root, password=****}
+00:27:50.611 [main] INFO  org.hibernate.orm.connections - HHH10001003: Autocommit mode: false
+00:27:50.614 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+00:27:50.631 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+00:27:50.707 [main] INFO  c.g.l.web.configuration.AppLogging - ************************Website - Method is starting!************************
+00:27:50.709 [main] INFO  c.g.l.web.configuration.AppLogging - Method execution(int com.gmail.liliyayalovchenko.dao.OrderDAO.getLastOrder())
+00:27:50.710 [main] INFO  c.g.l.web.configuration.AppLogging - Method : getLastOrder
+00:27:50.710 [main] INFO  c.g.l.web.configuration.AppLogging - Arguments : []
+00:27:50.740 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+00:27:50.891 [main] DEBUG org.hibernate.SQL - select max(order0_.order_num) as col_0_0_ from ORDER_FROM_MENU order0_
+00:27:50.930 [main] INFO  c.g.l.web.configuration.AppLogging - Method execution(int com.gmail.liliyayalovchenko.dao.OrderDAO.getLastOrder())
+00:27:50.930 [main] INFO  c.g.l.web.configuration.AppLogging - Method : getLastOrder
+00:27:50.931 [main] INFO  c.g.l.web.configuration.AppLogging - Arguments : []
+00:27:50.931 [main] INFO  c.g.l.web.configuration.AppLogging - ************************Website - Method is finishing!************************
+00:27:50.935 [main] DEBUG org.hibernate.SQL - select max(id) from ORDER_FROM_MENU
+00:27:50.961 [main] ERROR o.h.i.ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance beforeQuery flushing: com.gmail.liliyayalovchenko.domain.Employee]
+00:29:33.785 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+00:29:33.900 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+00:29:34.452 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.1.Final}
+00:29:34.455 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+00:29:34.457 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+00:29:34.538 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+00:29:34.752 [main] INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> z8kfsx9j7j8whx91h0tj|324a0017, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> z8kfsx9j7j8whx91h0tj|324a0017, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/RestaurantCRM, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+00:29:35.235 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+00:29:37.950 [main] WARN  org.hibernate.orm.connections - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+00:29:37.952 [main] INFO  org.hibernate.orm.connections - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/RestaurantCRM]
+00:29:37.953 [main] INFO  org.hibernate.orm.connections - HHH10001001: Connection properties: {user=root, password=****}
+00:29:37.954 [main] INFO  org.hibernate.orm.connections - HHH10001003: Autocommit mode: false
+00:29:37.957 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+00:29:37.974 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+00:29:38.069 [main] DEBUG org.hibernate.SQL - select max(id) from MENU
+00:29:38.130 [main] DEBUG org.hibernate.SQL - insert into MENU (name, id) values (?, ?)
+00:29:38.260 [main] DEBUG org.hibernate.SQL - select max(id) from INGREDIENT
+00:32:11.934 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+00:32:12.041 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+00:32:12.580 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.1.Final}
+00:32:12.583 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+00:32:12.586 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+00:32:12.658 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+00:32:12.827 [main] INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> z8kfsx9j7jcaiz1dqn8a2|324a0017, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> z8kfsx9j7jcaiz1dqn8a2|324a0017, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/RestaurantCRM, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+00:32:13.244 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+00:32:16.014 [main] WARN  org.hibernate.orm.connections - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+00:32:16.016 [main] INFO  org.hibernate.orm.connections - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/RestaurantCRM]
+00:32:16.017 [main] INFO  org.hibernate.orm.connections - HHH10001001: Connection properties: {user=root, password=****}
+00:32:16.017 [main] INFO  org.hibernate.orm.connections - HHH10001003: Autocommit mode: false
+00:32:16.020 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+00:32:16.032 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+00:32:16.115 [main] DEBUG org.hibernate.SQL - select max(id) from MENU
+00:32:16.157 [main] DEBUG org.hibernate.SQL - insert into MENU (name, id) values (?, ?)
+00:32:16.279 [main] DEBUG org.hibernate.SQL - select max(id) from INGREDIENT
+00:32:16.282 [main] DEBUG org.hibernate.SQL - insert into INGREDIENT (name, id) values (?, ?)
+00:32:16.368 [main] DEBUG org.hibernate.SQL - insert into INGREDIENT (name, id) values (?, ?)
+00:32:16.412 [main] DEBUG org.hibernate.SQL - select max(id) from DISH
+00:32:16.425 [main] DEBUG org.hibernate.SQL - insert into DISH (category, menu_id, name, photo, price, weight, id) values (?, ?, ?, ?, ?, ?, ?)
+00:32:16.428 [main] DEBUG org.hibernate.SQL - insert into DISH_INGREDIENTS (dish_id, ingredient_id) values (?, ?)
+00:32:16.512 [main] DEBUG org.hibernate.SQL - insert into DISH_INGREDIENTS (dish_id, ingredient_id) values (?, ?)
+00:37:30.334 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+00:37:30.439 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+00:37:30.960 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.1.Final}
+00:37:30.966 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+00:37:30.968 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+00:37:31.047 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+00:37:31.208 [main] INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> z8kfsx9j7jj47516hhmgu|324a0017, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> z8kfsx9j7jj47516hhmgu|324a0017, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/RestaurantCRM, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+00:37:31.770 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+00:37:34.496 [main] WARN  org.hibernate.orm.connections - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+00:37:34.498 [main] INFO  org.hibernate.orm.connections - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/RestaurantCRM]
+00:37:34.499 [main] INFO  org.hibernate.orm.connections - HHH10001001: Connection properties: {user=root, password=****}
+00:37:34.499 [main] INFO  org.hibernate.orm.connections - HHH10001003: Autocommit mode: false
+00:37:34.503 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+00:37:34.523 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+00:37:34.621 [main] DEBUG org.hibernate.SQL - select max(id) from MENU
+00:37:34.679 [main] DEBUG org.hibernate.SQL - insert into MENU (name, id) values (?, ?)
+00:37:34.791 [main] DEBUG org.hibernate.SQL - select max(id) from INGREDIENT
+00:37:34.859 [main] DEBUG org.hibernate.SQL - insert into INGREDIENT (name, id) values (?, ?)
+00:37:34.971 [main] DEBUG org.hibernate.SQL - insert into INGREDIENT (name, id) values (?, ?)
+00:37:35.093 [main] DEBUG org.hibernate.SQL - select max(id) from DISH
+00:37:35.107 [main] DEBUG org.hibernate.SQL - insert into DISH (category, menu_id, name, photo, price, weight, id) values (?, ?, ?, ?, ?, ?, ?)
+00:37:35.110 [main] DEBUG org.hibernate.SQL - insert into DISH_INGREDIENTS (dish_id, ingredient_id) values (?, ?)
+00:37:35.112 [main] DEBUG org.hibernate.SQL - insert into DISH_INGREDIENTS (dish_id, ingredient_id) values (?, ?)
+00:37:35.227 [main] DEBUG org.hibernate.SQL - select max(id) from EMPLOYEE
+00:37:35.230 [main] DEBUG org.hibernate.SQL - insert into EMPLOYEE (empl_date, first_name, phone, photo, position, salary, second_name, dtype, id) values (?, ?, ?, ?, ?, ?, ?, 'Waiter', ?)
+00:37:35.345 [main] INFO  c.g.l.web.configuration.AppLogging - ************************Website - Method is starting!************************
+00:37:35.348 [main] INFO  c.g.l.web.configuration.AppLogging - Method execution(int com.gmail.liliyayalovchenko.dao.OrderDAO.getLastOrder())
+00:37:35.349 [main] INFO  c.g.l.web.configuration.AppLogging - Method : getLastOrder
+00:37:35.349 [main] INFO  c.g.l.web.configuration.AppLogging - Arguments : []
+00:37:35.372 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+00:37:35.495 [main] DEBUG org.hibernate.SQL - select max(order0_.order_num) as col_0_0_ from ORDER_FROM_MENU order0_
+00:37:35.504 [main] INFO  c.g.l.web.configuration.AppLogging - Method execution(int com.gmail.liliyayalovchenko.dao.OrderDAO.getLastOrder())
+00:37:35.505 [main] INFO  c.g.l.web.configuration.AppLogging - Method : getLastOrder
+00:37:35.505 [main] INFO  c.g.l.web.configuration.AppLogging - Arguments : []
+00:37:35.505 [main] INFO  c.g.l.web.configuration.AppLogging - ************************Website - Method is finishing!************************
+00:37:35.506 [main] DEBUG org.hibernate.SQL - select max(id) from ORDER_FROM_MENU
+00:37:35.509 [main] ERROR o.h.i.ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance beforeQuery flushing: com.gmail.liliyayalovchenko.domain.Employee]
+00:42:24.149 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+00:42:24.245 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+00:42:24.764 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.1.Final}
+00:42:24.768 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+00:42:24.770 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+00:42:24.845 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+00:42:25.001 [main] INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> z8kfsx9j7jpewo1bg03nd|17aad511, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> z8kfsx9j7jpewo1bg03nd|17aad511, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/RestaurantCRM, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+00:42:25.496 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+00:42:28.352 [main] WARN  org.hibernate.orm.connections - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+00:42:28.354 [main] INFO  org.hibernate.orm.connections - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/RestaurantCRM]
+00:42:28.355 [main] INFO  org.hibernate.orm.connections - HHH10001001: Connection properties: {user=root, password=****}
+00:42:28.355 [main] INFO  org.hibernate.orm.connections - HHH10001003: Autocommit mode: false
+00:42:28.358 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+00:42:28.372 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+00:42:28.464 [main] DEBUG org.hibernate.SQL - select max(id) from MENU
+00:42:28.507 [main] DEBUG org.hibernate.SQL - insert into MENU (name, id) values (?, ?)
+00:42:28.619 [main] DEBUG org.hibernate.SQL - select max(id) from INGREDIENT
+00:42:28.620 [main] DEBUG org.hibernate.SQL - insert into INGREDIENT (name, id) values (?, ?)
+00:42:28.708 [main] DEBUG org.hibernate.SQL - insert into INGREDIENT (name, id) values (?, ?)
+00:42:28.764 [main] DEBUG org.hibernate.SQL - select max(id) from DISH
+00:42:28.780 [main] DEBUG org.hibernate.SQL - insert into DISH (category, menu_id, name, photo, price, weight, id) values (?, ?, ?, ?, ?, ?, ?)
+00:42:28.783 [main] DEBUG org.hibernate.SQL - insert into DISH_INGREDIENTS (dish_id, ingredient_id) values (?, ?)
+00:42:28.785 [main] DEBUG org.hibernate.SQL - insert into DISH_INGREDIENTS (dish_id, ingredient_id) values (?, ?)
+00:42:28.886 [main] DEBUG org.hibernate.SQL - select max(id) from EMPLOYEE
+00:42:28.892 [main] DEBUG org.hibernate.SQL - insert into EMPLOYEE (empl_date, first_name, phone, photo, position, salary, second_name, dtype, id) values (?, ?, ?, ?, ?, ?, ?, 'Waiter', ?)
+00:42:28.981 [main] INFO  c.g.l.web.configuration.AppLogging - ************************Website - Method is starting!************************
+00:42:28.984 [main] INFO  c.g.l.web.configuration.AppLogging - Method execution(int com.gmail.liliyayalovchenko.dao.OrderDAO.getLastOrder())
+00:42:28.984 [main] INFO  c.g.l.web.configuration.AppLogging - Method : getLastOrder
+00:42:28.984 [main] INFO  c.g.l.web.configuration.AppLogging - Arguments : []
+00:42:29.003 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+00:42:29.117 [main] DEBUG org.hibernate.SQL - select max(order0_.order_num) as col_0_0_ from ORDER_FROM_MENU order0_
+00:42:29.126 [main] INFO  c.g.l.web.configuration.AppLogging - Method execution(int com.gmail.liliyayalovchenko.dao.OrderDAO.getLastOrder())
+00:42:29.127 [main] INFO  c.g.l.web.configuration.AppLogging - Method : getLastOrder
+00:42:29.127 [main] INFO  c.g.l.web.configuration.AppLogging - Arguments : []
+00:42:29.127 [main] INFO  c.g.l.web.configuration.AppLogging - ************************Website - Method is finishing!************************
+00:42:29.128 [main] DEBUG org.hibernate.SQL - select max(id) from ORDER_FROM_MENU
+00:42:29.130 [main] DEBUG org.hibernate.SQL - insert into ORDER_FROM_MENU (employee_id, order_date, order_num, status, table_num, id) values (?, ?, ?, ?, ?, ?)
+00:42:29.132 [main] DEBUG org.hibernate.SQL - insert into ORDER_DISH (order_id, dish_id) values (?, ?)
+00:42:29.190 [main] INFO  c.g.l.web.configuration.AppLogging - ************************Website - Method is starting!************************
+00:42:29.190 [main] INFO  c.g.l.web.configuration.AppLogging - Method execution(List com.gmail.liliyayalovchenko.dao.OrderDAO.getOpenOrClosedOrder(OrderStatus))
+00:42:29.191 [main] INFO  c.g.l.web.configuration.AppLogging - Method : getOpenOrClosedOrder
+00:42:29.191 [main] INFO  c.g.l.web.configuration.AppLogging - Arguments : [opened]
+00:42:29.206 [main] DEBUG org.hibernate.SQL - select order0_.id as id1_6_, order0_.employee_id as employee6_6_, order0_.order_date as order_da2_6_, order0_.order_num as order_nu3_6_, order0_.status as status4_6_, order0_.table_num as table_nu5_6_ from ORDER_FROM_MENU order0_ where order0_.status=?
+00:42:29.215 [main] DEBUG org.hibernate.SQL - select employee0_.id as id2_2_0_, employee0_.empl_date as empl_dat3_2_0_, employee0_.first_name as first_na4_2_0_, employee0_.phone as phone5_2_0_, employee0_.photo as photo6_2_0_, employee0_.position as position7_2_0_, employee0_.salary as salary8_2_0_, employee0_.second_name as second_n9_2_0_, employee0_.dtype as dtype1_2_0_ from EMPLOYEE employee0_ where employee0_.id=? and employee0_.dtype in ('Employee', 'Cook', 'Waiter')
+00:42:29.223 [main] DEBUG org.hibernate.SQL - select employee0_.id as id2_2_0_, employee0_.empl_date as empl_dat3_2_0_, employee0_.first_name as first_na4_2_0_, employee0_.phone as phone5_2_0_, employee0_.photo as photo6_2_0_, employee0_.position as position7_2_0_, employee0_.salary as salary8_2_0_, employee0_.second_name as second_n9_2_0_, employee0_.dtype as dtype1_2_0_ from EMPLOYEE employee0_ where employee0_.id=? and employee0_.dtype in ('Employee', 'Cook', 'Waiter')
+00:42:29.227 [main] DEBUG org.hibernate.SQL - select orderlist0_.employee_id as employee6_6_0_, orderlist0_.id as id1_6_0_, orderlist0_.id as id1_6_1_, orderlist0_.employee_id as employee6_6_1_, orderlist0_.order_date as order_da2_6_1_, orderlist0_.order_num as order_nu3_6_1_, orderlist0_.status as status4_6_1_, orderlist0_.table_num as table_nu5_6_1_ from ORDER_FROM_MENU orderlist0_ where orderlist0_.employee_id=?
+00:42:29.233 [main] DEBUG org.hibernate.SQL - select dishlist0_.order_id as order_id1_5_0_, dishlist0_.dish_id as dish_id2_5_0_, dish1_.id as id1_0_1_, dish1_.category as category2_0_1_, dish1_.menu_id as menu_id7_0_1_, dish1_.name as name3_0_1_, dish1_.photo as photo4_0_1_, dish1_.price as price5_0_1_, dish1_.weight as weight6_0_1_ from ORDER_DISH dishlist0_ inner join DISH dish1_ on dishlist0_.dish_id=dish1_.id where dishlist0_.order_id=?
+00:42:29.236 [main] DEBUG org.hibernate.SQL - select menu0_.id as id1_4_0_, menu0_.name as name2_4_0_ from MENU menu0_ where menu0_.id=?
+00:42:29.238 [main] DEBUG org.hibernate.SQL - select menu0_.id as id1_4_0_, menu0_.name as name2_4_0_ from MENU menu0_ where menu0_.id=?
+00:42:29.240 [main] DEBUG org.hibernate.SQL - select dishlist0_.menu_id as menu_id7_0_0_, dishlist0_.id as id1_0_0_, dishlist0_.id as id1_0_1_, dishlist0_.category as category2_0_1_, dishlist0_.menu_id as menu_id7_0_1_, dishlist0_.name as name3_0_1_, dishlist0_.photo as photo4_0_1_, dishlist0_.price as price5_0_1_, dishlist0_.weight as weight6_0_1_ from DISH dishlist0_ where dishlist0_.menu_id=?
+00:42:29.245 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+00:42:29.247 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+00:42:29.248 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+00:42:29.250 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+00:42:29.252 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+00:42:29.253 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+00:42:29.254 [main] DEBUG org.hibernate.SQL - select dishlist0_.menu_id as menu_id7_0_0_, dishlist0_.id as id1_0_0_, dishlist0_.id as id1_0_1_, dishlist0_.category as category2_0_1_, dishlist0_.menu_id as menu_id7_0_1_, dishlist0_.name as name3_0_1_, dishlist0_.photo as photo4_0_1_, dishlist0_.price as price5_0_1_, dishlist0_.weight as weight6_0_1_ from DISH dishlist0_ where dishlist0_.menu_id=?
+00:42:29.257 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+00:42:29.259 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+00:42:29.260 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+00:42:29.261 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+00:42:29.263 [main] DEBUG org.hibernate.SQL - select dishlist0_.order_id as order_id1_5_0_, dishlist0_.dish_id as dish_id2_5_0_, dish1_.id as id1_0_1_, dish1_.category as category2_0_1_, dish1_.menu_id as menu_id7_0_1_, dish1_.name as name3_0_1_, dish1_.photo as photo4_0_1_, dish1_.price as price5_0_1_, dish1_.weight as weight6_0_1_ from ORDER_DISH dishlist0_ inner join DISH dish1_ on dishlist0_.dish_id=dish1_.id where dishlist0_.order_id=?
+00:42:29.266 [main] DEBUG org.hibernate.SQL - select menu0_.id as id1_4_0_, menu0_.name as name2_4_0_ from MENU menu0_ where menu0_.id=?
+00:42:29.267 [main] DEBUG org.hibernate.SQL - select dishlist0_.menu_id as menu_id7_0_0_, dishlist0_.id as id1_0_0_, dishlist0_.id as id1_0_1_, dishlist0_.category as category2_0_1_, dishlist0_.menu_id as menu_id7_0_1_, dishlist0_.name as name3_0_1_, dishlist0_.photo as photo4_0_1_, dishlist0_.price as price5_0_1_, dishlist0_.weight as weight6_0_1_ from DISH dishlist0_ where dishlist0_.menu_id=?
+00:42:29.269 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+00:42:29.271 [main] DEBUG org.hibernate.SQL - select orderlist0_.employee_id as employee6_6_0_, orderlist0_.id as id1_6_0_, orderlist0_.id as id1_6_1_, orderlist0_.employee_id as employee6_6_1_, orderlist0_.order_date as order_da2_6_1_, orderlist0_.order_num as order_nu3_6_1_, orderlist0_.status as status4_6_1_, orderlist0_.table_num as table_nu5_6_1_ from ORDER_FROM_MENU orderlist0_ where orderlist0_.employee_id=?
+00:42:29.273 [main] DEBUG org.hibernate.SQL - select dishlist0_.order_id as order_id1_5_0_, dishlist0_.dish_id as dish_id2_5_0_, dish1_.id as id1_0_1_, dish1_.category as category2_0_1_, dish1_.menu_id as menu_id7_0_1_, dish1_.name as name3_0_1_, dish1_.photo as photo4_0_1_, dish1_.price as price5_0_1_, dish1_.weight as weight6_0_1_ from ORDER_DISH dishlist0_ inner join DISH dish1_ on dishlist0_.dish_id=dish1_.id where dishlist0_.order_id=?
+00:42:29.275 [main] INFO  c.g.l.web.configuration.AppLogging - Method execution(List com.gmail.liliyayalovchenko.dao.OrderDAO.getOpenOrClosedOrder(OrderStatus))
+00:42:29.276 [main] INFO  c.g.l.web.configuration.AppLogging - Method : getOpenOrClosedOrder
+00:42:29.276 [main] INFO  c.g.l.web.configuration.AppLogging - Arguments : [opened]
+00:42:29.276 [main] INFO  c.g.l.web.configuration.AppLogging - ************************Website - Method is finishing!************************
+00:59:08.069 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+00:59:08.184 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+00:59:08.694 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.1.Final}
+00:59:08.698 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+00:59:08.700 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+00:59:08.791 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+00:59:08.945 [main] INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> z8kfsx9j7kaxjlwv9083|46944ca9, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> z8kfsx9j7kaxjlwv9083|46944ca9, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/RestaurantCRM, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+00:59:09.430 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+00:59:12.384 [main] WARN  org.hibernate.orm.connections - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+00:59:12.386 [main] INFO  org.hibernate.orm.connections - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/RestaurantCRM]
+00:59:12.387 [main] INFO  org.hibernate.orm.connections - HHH10001001: Connection properties: {user=root, password=****}
+00:59:12.388 [main] INFO  org.hibernate.orm.connections - HHH10001003: Autocommit mode: false
+00:59:12.390 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+00:59:12.404 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+00:59:12.497 [main] DEBUG org.hibernate.SQL - select max(id) from MENU
+00:59:12.536 [main] DEBUG org.hibernate.SQL - insert into MENU (name, id) values (?, ?)
+00:59:12.650 [main] DEBUG org.hibernate.SQL - select max(id) from INGREDIENT
+00:59:12.652 [main] DEBUG org.hibernate.SQL - insert into INGREDIENT (name, id) values (?, ?)
+00:59:12.758 [main] DEBUG org.hibernate.SQL - insert into INGREDIENT (name, id) values (?, ?)
+00:59:12.829 [main] DEBUG org.hibernate.SQL - select max(id) from DISH
+00:59:12.845 [main] DEBUG org.hibernate.SQL - insert into DISH (category, menu_id, name, photo, price, weight, id) values (?, ?, ?, ?, ?, ?, ?)
+00:59:12.849 [main] DEBUG org.hibernate.SQL - insert into DISH_INGREDIENTS (dish_id, ingredient_id) values (?, ?)
+00:59:12.995 [main] DEBUG org.hibernate.SQL - insert into DISH_INGREDIENTS (dish_id, ingredient_id) values (?, ?)
+00:59:13.096 [main] DEBUG org.hibernate.SQL - select max(id) from EMPLOYEE
+00:59:13.099 [main] DEBUG org.hibernate.SQL - insert into EMPLOYEE (empl_date, first_name, phone, photo, position, salary, second_name, dtype, id) values (?, ?, ?, ?, ?, ?, ?, 'Waiter', ?)
+00:59:13.194 [main] INFO  c.g.l.web.configuration.AppLogging - ************************Website - Method is starting!************************
+00:59:13.197 [main] INFO  c.g.l.web.configuration.AppLogging - Method execution(int com.gmail.liliyayalovchenko.dao.OrderDAO.getLastOrder())
+00:59:13.198 [main] INFO  c.g.l.web.configuration.AppLogging - Method : getLastOrder
+00:59:13.199 [main] INFO  c.g.l.web.configuration.AppLogging - Arguments : []
+00:59:13.221 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+00:59:13.372 [main] DEBUG org.hibernate.SQL - select max(order0_.order_num) as col_0_0_ from ORDER_FROM_MENU order0_
+00:59:13.381 [main] INFO  c.g.l.web.configuration.AppLogging - Method execution(int com.gmail.liliyayalovchenko.dao.OrderDAO.getLastOrder())
+00:59:13.381 [main] INFO  c.g.l.web.configuration.AppLogging - Method : getLastOrder
+00:59:13.382 [main] INFO  c.g.l.web.configuration.AppLogging - Arguments : []
+00:59:13.382 [main] INFO  c.g.l.web.configuration.AppLogging - ************************Website - Method is finishing!************************
+00:59:13.383 [main] DEBUG org.hibernate.SQL - select max(id) from ORDER_FROM_MENU
+00:59:13.385 [main] DEBUG org.hibernate.SQL - insert into ORDER_FROM_MENU (employee_id, order_date, order_num, status, table_num, id) values (?, ?, ?, ?, ?, ?)
+00:59:13.387 [main] DEBUG org.hibernate.SQL - insert into ORDER_DISH (order_id, dish_id) values (?, ?)
+00:59:13.489 [main] INFO  c.g.l.web.configuration.AppLogging - ************************Website - Method is starting!************************
+00:59:13.489 [main] INFO  c.g.l.web.configuration.AppLogging - Method execution(List com.gmail.liliyayalovchenko.dao.OrderDAO.getOpenOrClosedOrder(OrderStatus))
+00:59:13.490 [main] INFO  c.g.l.web.configuration.AppLogging - Method : getOpenOrClosedOrder
+00:59:13.490 [main] INFO  c.g.l.web.configuration.AppLogging - Arguments : [opened]
+00:59:13.501 [main] DEBUG org.hibernate.SQL - select order0_.id as id1_6_, order0_.employee_id as employee6_6_, order0_.order_date as order_da2_6_, order0_.order_num as order_nu3_6_, order0_.status as status4_6_, order0_.table_num as table_nu5_6_ from ORDER_FROM_MENU order0_ where order0_.status=?
+00:59:13.514 [main] DEBUG org.hibernate.SQL - select employee0_.id as id2_2_0_, employee0_.empl_date as empl_dat3_2_0_, employee0_.first_name as first_na4_2_0_, employee0_.phone as phone5_2_0_, employee0_.photo as photo6_2_0_, employee0_.position as position7_2_0_, employee0_.salary as salary8_2_0_, employee0_.second_name as second_n9_2_0_, employee0_.dtype as dtype1_2_0_ from EMPLOYEE employee0_ where employee0_.id=? and employee0_.dtype in ('Employee', 'Cook', 'Waiter')
+00:59:13.527 [main] DEBUG org.hibernate.SQL - select employee0_.id as id2_2_0_, employee0_.empl_date as empl_dat3_2_0_, employee0_.first_name as first_na4_2_0_, employee0_.phone as phone5_2_0_, employee0_.photo as photo6_2_0_, employee0_.position as position7_2_0_, employee0_.salary as salary8_2_0_, employee0_.second_name as second_n9_2_0_, employee0_.dtype as dtype1_2_0_ from EMPLOYEE employee0_ where employee0_.id=? and employee0_.dtype in ('Employee', 'Cook', 'Waiter')
+00:59:13.533 [main] DEBUG org.hibernate.SQL - select orderlist0_.employee_id as employee6_6_0_, orderlist0_.id as id1_6_0_, orderlist0_.id as id1_6_1_, orderlist0_.employee_id as employee6_6_1_, orderlist0_.order_date as order_da2_6_1_, orderlist0_.order_num as order_nu3_6_1_, orderlist0_.status as status4_6_1_, orderlist0_.table_num as table_nu5_6_1_ from ORDER_FROM_MENU orderlist0_ where orderlist0_.employee_id=?
+00:59:13.539 [main] DEBUG org.hibernate.SQL - select dishlist0_.order_id as order_id1_5_0_, dishlist0_.dish_id as dish_id2_5_0_, dish1_.id as id1_0_1_, dish1_.category as category2_0_1_, dish1_.menu_id as menu_id7_0_1_, dish1_.name as name3_0_1_, dish1_.photo as photo4_0_1_, dish1_.price as price5_0_1_, dish1_.weight as weight6_0_1_ from ORDER_DISH dishlist0_ inner join DISH dish1_ on dishlist0_.dish_id=dish1_.id where dishlist0_.order_id=?
+00:59:13.542 [main] DEBUG org.hibernate.SQL - select menu0_.id as id1_4_0_, menu0_.name as name2_4_0_ from MENU menu0_ where menu0_.id=?
+00:59:13.544 [main] DEBUG org.hibernate.SQL - select menu0_.id as id1_4_0_, menu0_.name as name2_4_0_ from MENU menu0_ where menu0_.id=?
+00:59:13.545 [main] DEBUG org.hibernate.SQL - select dishlist0_.menu_id as menu_id7_0_0_, dishlist0_.id as id1_0_0_, dishlist0_.id as id1_0_1_, dishlist0_.category as category2_0_1_, dishlist0_.menu_id as menu_id7_0_1_, dishlist0_.name as name3_0_1_, dishlist0_.photo as photo4_0_1_, dishlist0_.price as price5_0_1_, dishlist0_.weight as weight6_0_1_ from DISH dishlist0_ where dishlist0_.menu_id=?
+00:59:13.550 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+00:59:13.552 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+00:59:13.553 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+00:59:13.555 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+00:59:13.557 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+00:59:13.558 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+00:59:13.560 [main] DEBUG org.hibernate.SQL - select dishlist0_.menu_id as menu_id7_0_0_, dishlist0_.id as id1_0_0_, dishlist0_.id as id1_0_1_, dishlist0_.category as category2_0_1_, dishlist0_.menu_id as menu_id7_0_1_, dishlist0_.name as name3_0_1_, dishlist0_.photo as photo4_0_1_, dishlist0_.price as price5_0_1_, dishlist0_.weight as weight6_0_1_ from DISH dishlist0_ where dishlist0_.menu_id=?
+00:59:13.562 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+00:59:13.563 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+00:59:13.565 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+00:59:13.566 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+00:59:13.568 [main] DEBUG org.hibernate.SQL - select dishlist0_.order_id as order_id1_5_0_, dishlist0_.dish_id as dish_id2_5_0_, dish1_.id as id1_0_1_, dish1_.category as category2_0_1_, dish1_.menu_id as menu_id7_0_1_, dish1_.name as name3_0_1_, dish1_.photo as photo4_0_1_, dish1_.price as price5_0_1_, dish1_.weight as weight6_0_1_ from ORDER_DISH dishlist0_ inner join DISH dish1_ on dishlist0_.dish_id=dish1_.id where dishlist0_.order_id=?
+00:59:13.570 [main] DEBUG org.hibernate.SQL - select menu0_.id as id1_4_0_, menu0_.name as name2_4_0_ from MENU menu0_ where menu0_.id=?
+00:59:13.571 [main] DEBUG org.hibernate.SQL - select dishlist0_.menu_id as menu_id7_0_0_, dishlist0_.id as id1_0_0_, dishlist0_.id as id1_0_1_, dishlist0_.category as category2_0_1_, dishlist0_.menu_id as menu_id7_0_1_, dishlist0_.name as name3_0_1_, dishlist0_.photo as photo4_0_1_, dishlist0_.price as price5_0_1_, dishlist0_.weight as weight6_0_1_ from DISH dishlist0_ where dishlist0_.menu_id=?
+00:59:13.573 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+00:59:13.575 [main] DEBUG org.hibernate.SQL - select orderlist0_.employee_id as employee6_6_0_, orderlist0_.id as id1_6_0_, orderlist0_.id as id1_6_1_, orderlist0_.employee_id as employee6_6_1_, orderlist0_.order_date as order_da2_6_1_, orderlist0_.order_num as order_nu3_6_1_, orderlist0_.status as status4_6_1_, orderlist0_.table_num as table_nu5_6_1_ from ORDER_FROM_MENU orderlist0_ where orderlist0_.employee_id=?
+00:59:13.576 [main] DEBUG org.hibernate.SQL - select dishlist0_.order_id as order_id1_5_0_, dishlist0_.dish_id as dish_id2_5_0_, dish1_.id as id1_0_1_, dish1_.category as category2_0_1_, dish1_.menu_id as menu_id7_0_1_, dish1_.name as name3_0_1_, dish1_.photo as photo4_0_1_, dish1_.price as price5_0_1_, dish1_.weight as weight6_0_1_ from ORDER_DISH dishlist0_ inner join DISH dish1_ on dishlist0_.dish_id=dish1_.id where dishlist0_.order_id=?
+00:59:13.579 [main] INFO  c.g.l.web.configuration.AppLogging - Method execution(List com.gmail.liliyayalovchenko.dao.OrderDAO.getOpenOrClosedOrder(OrderStatus))
+00:59:13.579 [main] INFO  c.g.l.web.configuration.AppLogging - Method : getOpenOrClosedOrder
+00:59:13.579 [main] INFO  c.g.l.web.configuration.AppLogging - Arguments : [opened]
+00:59:13.579 [main] INFO  c.g.l.web.configuration.AppLogging - ************************Website - Method is finishing!************************
+01:02:15.825 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+01:02:15.932 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+01:02:16.435 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.1.Final}
+01:02:16.440 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+01:02:16.442 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+01:02:16.519 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+01:02:16.706 [main] INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> z8kfsx9j7keyew1hmk3wc|17aad511, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> z8kfsx9j7keyew1hmk3wc|17aad511, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/RestaurantCRM, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+01:02:17.286 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+01:02:20.269 [main] WARN  org.hibernate.orm.connections - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+01:02:20.271 [main] INFO  org.hibernate.orm.connections - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/RestaurantCRM]
+01:02:20.272 [main] INFO  org.hibernate.orm.connections - HHH10001001: Connection properties: {user=root, password=****}
+01:02:20.273 [main] INFO  org.hibernate.orm.connections - HHH10001003: Autocommit mode: false
+01:02:20.277 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+01:02:20.293 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+01:02:20.398 [main] DEBUG org.hibernate.SQL - select max(id) from MENU
+01:02:20.459 [main] DEBUG org.hibernate.SQL - insert into MENU (name, id) values (?, ?)
+01:02:20.562 [main] DEBUG org.hibernate.SQL - select max(id) from INGREDIENT
+01:02:20.564 [main] DEBUG org.hibernate.SQL - insert into INGREDIENT (name, id) values (?, ?)
+01:02:20.681 [main] DEBUG org.hibernate.SQL - insert into INGREDIENT (name, id) values (?, ?)
+01:02:20.737 [main] DEBUG org.hibernate.SQL - select max(id) from DISH
+01:02:20.749 [main] DEBUG org.hibernate.SQL - insert into DISH (category, menu_id, name, photo, price, weight, id) values (?, ?, ?, ?, ?, ?, ?)
+01:02:20.752 [main] DEBUG org.hibernate.SQL - insert into DISH_INGREDIENTS (dish_id, ingredient_id) values (?, ?)
+01:02:20.754 [main] DEBUG org.hibernate.SQL - insert into DISH_INGREDIENTS (dish_id, ingredient_id) values (?, ?)
+01:02:20.859 [main] DEBUG org.hibernate.SQL - select max(id) from EMPLOYEE
+01:02:20.862 [main] DEBUG org.hibernate.SQL - insert into EMPLOYEE (empl_date, first_name, phone, photo, position, salary, second_name, dtype, id) values (?, ?, ?, ?, ?, ?, ?, 'Waiter', ?)
+01:02:20.979 [main] INFO  c.g.l.web.configuration.AppLogging - ************************Website - Method is starting!************************
+01:02:20.981 [main] INFO  c.g.l.web.configuration.AppLogging - Method execution(int com.gmail.liliyayalovchenko.dao.OrderDAO.getLastOrder())
+01:02:20.982 [main] INFO  c.g.l.web.configuration.AppLogging - Method : getLastOrder
+01:02:20.982 [main] INFO  c.g.l.web.configuration.AppLogging - Arguments : []
+01:02:21.002 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+01:02:21.140 [main] DEBUG org.hibernate.SQL - select max(order0_.order_num) as col_0_0_ from ORDER_FROM_MENU order0_
+01:02:21.150 [main] INFO  c.g.l.web.configuration.AppLogging - Method execution(int com.gmail.liliyayalovchenko.dao.OrderDAO.getLastOrder())
+01:02:21.150 [main] INFO  c.g.l.web.configuration.AppLogging - Method : getLastOrder
+01:02:21.150 [main] INFO  c.g.l.web.configuration.AppLogging - Arguments : []
+01:02:21.151 [main] INFO  c.g.l.web.configuration.AppLogging - ************************Website - Method is finishing!************************
+01:02:21.152 [main] DEBUG org.hibernate.SQL - select max(id) from ORDER_FROM_MENU
+01:02:21.154 [main] DEBUG org.hibernate.SQL - insert into ORDER_FROM_MENU (employee_id, order_date, order_num, status, table_num, id) values (?, ?, ?, ?, ?, ?)
+01:02:21.156 [main] DEBUG org.hibernate.SQL - insert into ORDER_DISH (order_id, dish_id) values (?, ?)
+01:02:21.219 [main] INFO  c.g.l.web.configuration.AppLogging - ************************Website - Method is starting!************************
+01:02:21.220 [main] INFO  c.g.l.web.configuration.AppLogging - Method execution(List com.gmail.liliyayalovchenko.dao.OrderDAO.getOpenOrClosedOrder(OrderStatus))
+01:02:21.220 [main] INFO  c.g.l.web.configuration.AppLogging - Method : getOpenOrClosedOrder
+01:02:21.220 [main] INFO  c.g.l.web.configuration.AppLogging - Arguments : [opened]
+01:02:21.236 [main] DEBUG org.hibernate.SQL - select order0_.id as id1_6_, order0_.employee_id as employee6_6_, order0_.order_date as order_da2_6_, order0_.order_num as order_nu3_6_, order0_.status as status4_6_, order0_.table_num as table_nu5_6_ from ORDER_FROM_MENU order0_ where order0_.status=?
+01:02:21.246 [main] DEBUG org.hibernate.SQL - select employee0_.id as id2_2_0_, employee0_.empl_date as empl_dat3_2_0_, employee0_.first_name as first_na4_2_0_, employee0_.phone as phone5_2_0_, employee0_.photo as photo6_2_0_, employee0_.position as position7_2_0_, employee0_.salary as salary8_2_0_, employee0_.second_name as second_n9_2_0_, employee0_.dtype as dtype1_2_0_ from EMPLOYEE employee0_ where employee0_.id=? and employee0_.dtype in ('Employee', 'Cook', 'Waiter')
+01:02:21.254 [main] DEBUG org.hibernate.SQL - select employee0_.id as id2_2_0_, employee0_.empl_date as empl_dat3_2_0_, employee0_.first_name as first_na4_2_0_, employee0_.phone as phone5_2_0_, employee0_.photo as photo6_2_0_, employee0_.position as position7_2_0_, employee0_.salary as salary8_2_0_, employee0_.second_name as second_n9_2_0_, employee0_.dtype as dtype1_2_0_ from EMPLOYEE employee0_ where employee0_.id=? and employee0_.dtype in ('Employee', 'Cook', 'Waiter')
+01:02:21.259 [main] DEBUG org.hibernate.SQL - select orderlist0_.employee_id as employee6_6_0_, orderlist0_.id as id1_6_0_, orderlist0_.id as id1_6_1_, orderlist0_.employee_id as employee6_6_1_, orderlist0_.order_date as order_da2_6_1_, orderlist0_.order_num as order_nu3_6_1_, orderlist0_.status as status4_6_1_, orderlist0_.table_num as table_nu5_6_1_ from ORDER_FROM_MENU orderlist0_ where orderlist0_.employee_id=?
+01:02:21.265 [main] DEBUG org.hibernate.SQL - select dishlist0_.order_id as order_id1_5_0_, dishlist0_.dish_id as dish_id2_5_0_, dish1_.id as id1_0_1_, dish1_.category as category2_0_1_, dish1_.menu_id as menu_id7_0_1_, dish1_.name as name3_0_1_, dish1_.photo as photo4_0_1_, dish1_.price as price5_0_1_, dish1_.weight as weight6_0_1_ from ORDER_DISH dishlist0_ inner join DISH dish1_ on dishlist0_.dish_id=dish1_.id where dishlist0_.order_id=?
+01:02:21.268 [main] DEBUG org.hibernate.SQL - select menu0_.id as id1_4_0_, menu0_.name as name2_4_0_ from MENU menu0_ where menu0_.id=?
+01:02:21.270 [main] DEBUG org.hibernate.SQL - select menu0_.id as id1_4_0_, menu0_.name as name2_4_0_ from MENU menu0_ where menu0_.id=?
+01:02:21.272 [main] DEBUG org.hibernate.SQL - select dishlist0_.menu_id as menu_id7_0_0_, dishlist0_.id as id1_0_0_, dishlist0_.id as id1_0_1_, dishlist0_.category as category2_0_1_, dishlist0_.menu_id as menu_id7_0_1_, dishlist0_.name as name3_0_1_, dishlist0_.photo as photo4_0_1_, dishlist0_.price as price5_0_1_, dishlist0_.weight as weight6_0_1_ from DISH dishlist0_ where dishlist0_.menu_id=?
+01:02:21.277 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+01:02:21.279 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+01:02:21.280 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+01:02:21.283 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+01:02:21.284 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+01:02:21.286 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+01:02:21.287 [main] DEBUG org.hibernate.SQL - select dishlist0_.menu_id as menu_id7_0_0_, dishlist0_.id as id1_0_0_, dishlist0_.id as id1_0_1_, dishlist0_.category as category2_0_1_, dishlist0_.menu_id as menu_id7_0_1_, dishlist0_.name as name3_0_1_, dishlist0_.photo as photo4_0_1_, dishlist0_.price as price5_0_1_, dishlist0_.weight as weight6_0_1_ from DISH dishlist0_ where dishlist0_.menu_id=?
+01:02:21.290 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+01:02:21.291 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+01:02:21.293 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+01:02:21.294 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+01:02:21.296 [main] DEBUG org.hibernate.SQL - select dishlist0_.order_id as order_id1_5_0_, dishlist0_.dish_id as dish_id2_5_0_, dish1_.id as id1_0_1_, dish1_.category as category2_0_1_, dish1_.menu_id as menu_id7_0_1_, dish1_.name as name3_0_1_, dish1_.photo as photo4_0_1_, dish1_.price as price5_0_1_, dish1_.weight as weight6_0_1_ from ORDER_DISH dishlist0_ inner join DISH dish1_ on dishlist0_.dish_id=dish1_.id where dishlist0_.order_id=?
+01:02:21.299 [main] DEBUG org.hibernate.SQL - select menu0_.id as id1_4_0_, menu0_.name as name2_4_0_ from MENU menu0_ where menu0_.id=?
+01:02:21.301 [main] DEBUG org.hibernate.SQL - select dishlist0_.menu_id as menu_id7_0_0_, dishlist0_.id as id1_0_0_, dishlist0_.id as id1_0_1_, dishlist0_.category as category2_0_1_, dishlist0_.menu_id as menu_id7_0_1_, dishlist0_.name as name3_0_1_, dishlist0_.photo as photo4_0_1_, dishlist0_.price as price5_0_1_, dishlist0_.weight as weight6_0_1_ from DISH dishlist0_ where dishlist0_.menu_id=?
+01:02:21.303 [main] DEBUG org.hibernate.SQL - select ingredient0_.dish_id as dish_id1_1_0_, ingredient0_.ingredient_id as ingredie2_1_0_, ingredient1_.id as id1_3_1_, ingredient1_.name as name2_3_1_ from DISH_INGREDIENTS ingredient0_ inner join INGREDIENT ingredient1_ on ingredient0_.ingredient_id=ingredient1_.id where ingredient0_.dish_id=?
+01:02:21.305 [main] DEBUG org.hibernate.SQL - select orderlist0_.employee_id as employee6_6_0_, orderlist0_.id as id1_6_0_, orderlist0_.id as id1_6_1_, orderlist0_.employee_id as employee6_6_1_, orderlist0_.order_date as order_da2_6_1_, orderlist0_.order_num as order_nu3_6_1_, orderlist0_.status as status4_6_1_, orderlist0_.table_num as table_nu5_6_1_ from ORDER_FROM_MENU orderlist0_ where orderlist0_.employee_id=?
+01:02:21.307 [main] DEBUG org.hibernate.SQL - select dishlist0_.order_id as order_id1_5_0_, dishlist0_.dish_id as dish_id2_5_0_, dish1_.id as id1_0_1_, dish1_.category as category2_0_1_, dish1_.menu_id as menu_id7_0_1_, dish1_.name as name3_0_1_, dish1_.photo as photo4_0_1_, dish1_.price as price5_0_1_, dish1_.weight as weight6_0_1_ from ORDER_DISH dishlist0_ inner join DISH dish1_ on dishlist0_.dish_id=dish1_.id where dishlist0_.order_id=?
+01:02:21.310 [main] INFO  c.g.l.web.configuration.AppLogging - Method execution(List com.gmail.liliyayalovchenko.dao.OrderDAO.getOpenOrClosedOrder(OrderStatus))
+01:02:21.310 [main] INFO  c.g.l.web.configuration.AppLogging - Method : getOpenOrClosedOrder
+01:02:21.310 [main] INFO  c.g.l.web.configuration.AppLogging - Arguments : [opened]
+01:02:21.311 [main] INFO  c.g.l.web.configuration.AppLogging - ************************Website - Method is finishing!************************
+01:02:21.320 [main] DEBUG org.hibernate.SQL - update ORDER_FROM_MENU set employee_id=null where employee_id=?
+01:02:21.321 [main] DEBUG org.hibernate.SQL - delete from DISH_INGREDIENTS where dish_id=?
+01:02:21.323 [main] DEBUG org.hibernate.SQL - delete from ORDER_DISH where order_id=?
+01:02:21.324 [main] DEBUG org.hibernate.SQL - delete from DISH where id=?
+01:02:21.426 [main] DEBUG org.hibernate.SQL - delete from INGREDIENT where id=?
+01:02:21.428 [main] DEBUG org.hibernate.SQL - delete from INGREDIENT where id=?
+01:02:21.538 [main] DEBUG org.hibernate.SQL - delete from MENU where id=?
+01:02:21.540 [main] DEBUG org.hibernate.SQL - delete from ORDER_FROM_MENU where id=?
+01:02:21.542 [main] DEBUG org.hibernate.SQL - delete from EMPLOYEE where id=?

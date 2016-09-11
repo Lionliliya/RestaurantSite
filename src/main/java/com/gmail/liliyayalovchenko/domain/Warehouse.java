@@ -7,7 +7,6 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "WAREHOUSE")
-//@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Warehouse {
 
     @Id

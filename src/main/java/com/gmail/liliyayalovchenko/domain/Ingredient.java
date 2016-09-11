@@ -9,7 +9,6 @@ import java.util.List;
 
 @Entity
 @Table(name = "INGREDIENT")
-//@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Ingredient {
 
     @Id

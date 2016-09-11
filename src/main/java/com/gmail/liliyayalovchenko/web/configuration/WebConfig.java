@@ -40,6 +40,7 @@ import java.util.Properties;
 @EnableTransactionManagement(mode = AdviceMode.PROXY)
 public class WebConfig extends WebMvcConfigurerAdapter {
 
+
     private Environment environment;
 
     public WebConfig(Environment environment) {
@@ -87,7 +88,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     }
 
     @Bean
-    public RequestMappingHandlerAdapter requestMappingHandlerAdapter(List<HttpMessageConverter<?>> converters){
+    public RequestMappingHandlerAdapter requestMappingHandlerAdapter(List<HttpMessageConverter<?>> converters) {
         RequestMappingHandlerAdapter adapter = new RequestMappingHandlerAdapter();
         StringHttpMessageConverter stringConverter = new StringHttpMessageConverter();
         stringConverter.setWriteAcceptCharset(false);

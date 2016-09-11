@@ -69,9 +69,10 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler({EmployeeNotFoundException.class, MenuNotFoundException.class,
-                       OrderNotFoundException.class})
-    public @ResponseBody
-    ExceptionJSONInfo handleApiNotFoundException(HttpServletRequest request, Exception ex){
+            OrderNotFoundException.class})
+    public
+    @ResponseBody
+    ExceptionJSONInfo handleApiNotFoundException(HttpServletRequest request, Exception ex) {
 
         ExceptionJSONInfo response = new ExceptionJSONInfo();
         response.setUrl(request.getRequestURL().toString());

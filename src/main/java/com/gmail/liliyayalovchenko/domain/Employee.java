@@ -14,7 +14,6 @@ import java.util.Date;
 @Entity
 @Table(name = "EMPLOYEE")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-//@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @JsonIgnoreProperties(ignoreUnknown = false)
 @Proxy(lazy = false)
 
@@ -109,7 +108,8 @@ public class Employee {
         this.photoLink = photoLink;
     }
 
-    public Employee() {}
+    public Employee() {
+    }
 
     public void setId(int id) {
         this.id = id;

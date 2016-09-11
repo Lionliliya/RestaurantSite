@@ -15,7 +15,6 @@ public class OrderDAOImpl implements OrderDAO {
     @Autowired
     private SessionFactory sessionFactory;
 
-
     @Override
     @Transactional(propagation = Propagation.MANDATORY)
     public List<Order> findAll() {
@@ -42,6 +41,14 @@ public class OrderDAOImpl implements OrderDAO {
         } else {
             throw new RuntimeException("Cant get order by this id! Error!");
         }
+    }
+
+    @Override
+    @Transactional(propagation = Propagation.MANDATORY)
+    public int getLastOrder() {
+        return (int) sessionFactory.getCurrentSession()
+                .createQuery("select max(o.orderNumber) from Order o")
+                .uniqueResult();
     }
 
 }

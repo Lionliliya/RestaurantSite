@@ -18,7 +18,6 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     @Autowired
     private SessionFactory sessionFactory;
 
-
     @Override
     @Transactional(propagation = Propagation.MANDATORY)
     public Employee getById(int id) {

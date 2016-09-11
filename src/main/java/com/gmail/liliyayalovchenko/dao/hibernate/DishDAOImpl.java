@@ -24,9 +24,10 @@ public class DishDAOImpl implements DishDAO {
     @Transactional(propagation = Propagation.MANDATORY)
     public Dish getDishByName(String dishName) {
         Session session = sessionFactory.getCurrentSession();
-        Criteria criteria = session.createCriteria(Dish.class);
-        criteria.add(Restrictions.eq("name", dishName));
-        Dish dish = (Dish) criteria.list().get(0);
+
+        Dish dish = (Dish) session.createQuery("select d from Dish d where d.name = :var")
+                .setParameter("var", dishName)
+                .uniqueResult();
         if (dish != null) {
             return dish;
         } else {
