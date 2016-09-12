@@ -88,7 +88,7 @@
         </p>
 
           <p class="text-center" style="font-family: 'Minion Pro'; font-size: medium; color: #689f38">
-            <a href="/menu">Back to menu</a>
+            <a href="/menus">Back to menu</a>
           </p>
 
       </div><!-- /.col-lg-4 -->

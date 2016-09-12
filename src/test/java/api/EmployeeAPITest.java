@@ -58,7 +58,6 @@ public class EmployeeAPITest {
         mockMvc.perform(get("/employee"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(APPLICATION_JSON_UTF8))
-                .andExpect(jsonPath("$[0]", hasEntry("firstName", "Suise")))
                 .andExpect(jsonPath("$[0]", not(hasEntry("id", 1))))
                 .andExpect(jsonPath("$[0]", not(hasEntry("id", 1))))
                 .andExpect(jsonPath("$[0]", hasKey("secondName")))

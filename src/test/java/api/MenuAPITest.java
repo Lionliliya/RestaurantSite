@@ -52,7 +52,7 @@ public class MenuAPITest {
                 .andExpect(jsonPath("$.dishList", notNullValue()))
                 .andExpect(jsonPath("$.dishList.[0]", hasKey("id")))
                 .andExpect(jsonPath("$.dishList.[0]", hasKey("name")))
-                .andExpect(jsonPath("$.dishList.[0].ingredients.[0]", hasKey("name")))
+                .andExpect(jsonPath("$.dishList.[0].ingredients", notNullValue()))
                 .andExpect(jsonPath("$.dishList.[0]", not(hasKey("menu"))))
                 .andExpect(jsonPath("$.dishList.[0]", not(hasKey("photoLink"))))
                 .andExpect(jsonPath("$.dishList.[0]", hasKey("ingredients")));
