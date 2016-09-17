@@ -11,6 +11,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.AnnotationConfigWebContextLoader;
@@ -46,6 +47,7 @@ public class EmployeeDAOTest {
 
     @Test
     @Transactional
+    @Rollback(true)
     public void testGetById() throws Exception {
         Employee employee = createEmployee();
         persistTestObject(employee);
@@ -62,6 +64,7 @@ public class EmployeeDAOTest {
 
     @Test
     @Transactional
+    @Rollback(true)
     public void testGetByFirstName() throws Exception {
         Employee employee = createEmployee();
         persistTestObject(employee);

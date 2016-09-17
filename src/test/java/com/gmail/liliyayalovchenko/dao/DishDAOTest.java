@@ -13,6 +13,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.AnnotationConfigWebContextLoader;
@@ -50,6 +51,7 @@ public class DishDAOTest {
 
     @Test
     @Transactional
+    @Rollback(true)
      public void shouldGetByName() throws Exception {
         Menu menu = createMenu("Summer");
         persistMenu(session, transaction, menu);
